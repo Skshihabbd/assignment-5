@@ -468,7 +468,7 @@
               </label>
             </div>
 
-            <button onclick="completeAlert()" disabled id="next-buttonid" class="bg-[#1DD100] btn w-full">Next</button>
+            <button onclick="my_modal_1.showModal()" disabled id="next-buttonid" class="bg-[#1DD100] btn  w-full hover:bg-teal-950 ">Next</button>
           </div>
 
           <!-- text input mother div end -->
@@ -479,12 +479,16 @@
       <!-- end of calculator section -->
     </section>
 
-    <!-- alert-section -->
+<!-- modal-section -->
+<!-- Open the modal using ID.showModal() method -->
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
     <section id="alert-section"
-      class="mt-40 min-h-screen flex justify-center items-center bg-[#9e9696]"
+      class="  flex justify-center items-center "
     >
       <div
-        class="bg-[#FFFFFF] max-w-[718px] min-h-[400px] flex items-center justify-center flex-col text-center gap-3 rounded-2xl"
+        class="bg-[#FFFFFF]   flex items-center justify-center flex-col text-center gap-3 rounded-2xl"
       >
         <p><img class="" src="images/success.png" alt="" srcset="" /></p>
         <p>SUCCESS</p>
@@ -497,8 +501,18 @@
         <button class="px-10 bg-[#27AE60] py-2 rounded-3xl">Continue</button>
       </div>
     </section>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
 
-    <!-- alert-section -->
+<!-- modal-section -->
+
+    
     <script src="utility.js"></script>
     <script src="calculator.js"></script>
   </body>

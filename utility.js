@@ -38,7 +38,6 @@ function allSeatContainer() {
         return;
       }
 
-
       // 40-seat-id
       const fourtySeatId = document.getElementById("40-seat-id");
       const inText = fourtySeatId.innerText;
@@ -51,14 +50,30 @@ function allSeatContainer() {
       // phone-number-validation
       const phoneNumberGet=document.getElementById('phone-number')
       const phoneNumberValue=phoneNumberGet.value
+      const phoneNumberValuecon=parseInt(phoneNumberValue)
       console.log(phoneNumberValue)
       const nextButton=document.getElementById('next-buttonid')
-      if (  count>=1  || typeof phoneNumberValue ==='number' ) {
+      if (  count>=1  || typeof phoneNumberValuecon ==='number' ) {
 
       nextButton.removeAttribute('disabled')
       }
 
       // phone-number-validation
+
+
+      // nextbutton-working-function
+
+      // document.getElementById("phone-number").addEventListener("keyup", function () {
+      //     const valueGetting = document.getElementById("phone-number").value;
+      //  const   valueGettingConvert =parseInt(valueGetting)
+      //     const nextButton = document.getElementById("next-buttonid");
+      //     if (   typeof valueGettingConvert === "number") {
+      //       nextButton.removeAttribute("disabled");
+      //     }
+      //   });
+  
+      //  nextbutton-working-function
+
 
       // phone-number-validation
 
@@ -106,19 +121,7 @@ function allSeatContainer() {
 
       // not more than four button click
     });
-    // applybutton-working-function
-    //     const phoneNumberGet=document.getElementById('phone-number')
-
-    //     const nextButton=document.getElementById('next-buttonid')
-    //     phoneNumberGet.addEventListener('input',function(){
-    // const valueGetting = this.value.trim()
-    // if ( valueGetting=== 'number'){
-    //   nextButton.removeAttribute('disabled')
-
-    // }
-    //     })
-
-    //  applybutton-working-function
+    
   }
 }
 
