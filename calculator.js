@@ -66,6 +66,7 @@ apply();
 function completeAlert(){
 
 const alertSection=document.getElementById('alert-section')
-alertSection.scrollIntoView({behavior:"smooth"})
+ alertSection.scrollIntoView({behavior:"smooth"})
+
 
 }

@@ -11,14 +11,6 @@ function allSeatContainer() {
     perSeat.addEventListener("click", function () {
       const perseattext = perSeat.innerText;
 
-      // 40-seat-id
-      const fourtySeatId = document.getElementById("40-seat-id");
-      const inText = fourtySeatId.innerText;
-      const convertInText = parseInt(inText);
-      const convertInTextdecrease = convertInText - 1;
-      fourtySeatId.innerText = convertInTextdecrease;
-
-      // 40-seat-id
       const divMakig = document.createElement("div");
 
       // seat-price-calculation-showbar
@@ -32,9 +24,6 @@ function allSeatContainer() {
       economyTextPara.innerText = "Economy";
       const economy = economyTextPara.innerText;
 
-
-
-
       const perSeatPriceText = document.createElement("p");
       perSeatPriceText.innerText = "550";
       numberConversionFiveHundred = parseInt(perSeatPriceText.innerText);
@@ -46,22 +35,32 @@ function allSeatContainer() {
       if (count >= 5) {
         applyButton.removeAttribute("disabled");
         alert("shihab");
-        return
+        return;
+      }
+
+
+      // 40-seat-id
+      const fourtySeatId = document.getElementById("40-seat-id");
+      const inText = fourtySeatId.innerText;
+      const convertInText = parseInt(inText);
+      const convertInTextdecrease = convertInText - 1;
+      fourtySeatId.innerText = convertInTextdecrease;
+
+      // 40-seat-id
+
+      // phone-number-validation
+      const phoneNumberGet=document.getElementById('phone-number')
+      const phoneNumberValue=phoneNumberGet.value
+      console.log(phoneNumberValue)
+      const nextButton=document.getElementById('next-buttonid')
+      if (  count>=1  || typeof phoneNumberValue ==='number' ) {
+
+      nextButton.removeAttribute('disabled')
       }
 
       // phone-number-validation
-const phoneNumberGet=document.getElementById('phone-number')
-const phoneNumberValue=phoneNumberGet.value
-const nextButton=document.getElementById('next-buttonid')
-if (typeof phoneNumberValue ==='number' || count>=2 ) {
-  
-nextButton.removeAttribute('disabled','')
-}
 
-
-// phone-number-validation
-
-      
+      // phone-number-validation
 
       divMakig.appendChild(seatNameSet);
       divMakig.appendChild(economyTextPara);
@@ -108,6 +107,16 @@ nextButton.removeAttribute('disabled','')
       // not more than four button click
     });
     // applybutton-working-function
+    //     const phoneNumberGet=document.getElementById('phone-number')
+
+    //     const nextButton=document.getElementById('next-buttonid')
+    //     phoneNumberGet.addEventListener('input',function(){
+    // const valueGetting = this.value.trim()
+    // if ( valueGetting=== 'number'){
+    //   nextButton.removeAttribute('disabled')
+
+    // }
+    //     })
 
     //  applybutton-working-function
   }
